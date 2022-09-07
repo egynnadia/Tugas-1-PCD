@@ -19,9 +19,9 @@ Namun sebelumnya dilakukan pre-processing antara lain:
 - perbaikan kekontrasan dengan histogram ekualisasi, 
 - mengubah citra gray ke citra biner (monocrhome). 
 
-##PERANCANGAN DAN IMPLEMENTASI SISTEM
-###Desain Model Sistem
-
+## Pengimplementasian Citra Digital pada Scan Barcode
+### Desain Model Sistem
+Sistem akan mendeteksi letak barcode yang ada pada sebuah produk. Setelah terdeteksi maka langsung masuk ke sistem kamera untuk mengambil gambar produk yang akan discan barcodenya. Setelah gambar masuk kedalam sistem, maka sistem akan mengidentifikasi letak barcode. Jika barcode teridentifikasi maka akan dilanjutkan ke proses pembaca barcode dengan keluaran suara. Namun jika sistem tidak dapat mengidentifikasi letak barcode maka harus dilakukan pengambilan gambar ulang.
 
 ## Cara Komputer-Scanner Membaca Barcode
 Suatu bilangan barcode tunggal sebenarnya terdiri dari tujuh unit. Satu unit terdiri dari salah satu warna hitam atau putih. Sebuah unit yang berwarna hitam ditunjukkan dengan sebuah bar, sedangkan yang berwarna putih ditunjukkan dengan sebuah space (spasi). Cara lain penulisan barcode adalah dengan bilang “1” untuk menyatakan black bar dan bilangan “0” untuk menyatakan white space. Misalnya, tujuh unit berikut ini adalah 0011001 dapat dinyatakan sebagai berikut space-space-bar-bar-space-space-bar.
