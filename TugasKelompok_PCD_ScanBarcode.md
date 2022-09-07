@@ -18,25 +18,15 @@ Di dalam komputer, data elektrik tadi ditampilkan dalam format yang sudah dikehe
 ### Deteksi Tepi (Edge Detection)
 Pada proses deteksi tepi ini citra barcode yang akan menjadi inputan diolah sehingga tepi citra barcode tampak lebih jelas serta memberikan efek smoothing sehingga citra bersih dari noise.
 
-![hasil tepi](/Barcode Hasil Proses Deteksi Tepi.PNG)
+![hasil tepi](/DeteksiTepi.PNG)
 
 ### Grayscalling dan Thresholding
 Setelah citra barcode mengalami proses deteksi tepi lalu citra mengalami 7 proses grayscalling, nilai dari hasil grayscalling digunakan untuk proses thresholding untuk mengubah nilai piksel menjadi 2 macam yaitu 0 dan 1.
 
+![Grayscalling](/Grayscalling.PNG)
+
 ### Ekstraksi Ciri
-Nilai-nilai pixel dari proses grayscalling, edge detection, dan thresholding yang masih berukuran besar tidak diambil secara keseluruhan tetapi diambil hanya nilai pixel pada bagian tengah-tengah citra secara horizontal.Citra input berukuran 60×100 pixel dikonversi menjadi 20×30 pixel supaya pada saat training lebih efisien waktu dan tidak berat.
-
-
-Bentuk citra yang digunakan berupa citra biner sehingga pada data input harus dilakukan proses edge detection, grayscalling dan thresholding. Untuk mendapatkan input yang cocok untuk jaringan syaraf tiruan.
-
-Sistem pembaca barcode berbasis pengolahan citra digital dengan menggunakan metode morfologi. 
-- Barcode yang digunakan akan diambil fotonya dengan menggunakan kamera digital. Untuk mendapatkan citra yang diinginkan 
-- dilakukan proses cropping sehinnga hanya citra barcode yang dihasilkan. 
-Namun sebelumnya dilakukan pre-processing antara lain: 
-- mengubah citra RGB ke citra gray, 
-- mereduksi noise dengan median filter, 
-- perbaikan kekontrasan dengan histogram ekualisasi, 
-- mengubah citra gray ke citra biner (monocrhome). 
+Nilai-nilai pixel dari proses grayscalling, edge detection, dan thresholding yang masih berukuran besar tidak diambil secara keseluruhan tetapi diambil hanya nilai pixel pada bagian tengah-tengah citra secara horizontal.Citra input berukuran 60×100 pixel dikonversi menjadi 20×30 pixel supaya pada saat training lebih efisien waktu dan tidak berat. 
 
 ## Cara Komputer-Scanner Membaca Barcode
 Suatu bilangan barcode tunggal sebenarnya terdiri dari tujuh unit. Satu unit terdiri dari salah satu warna hitam atau putih. Sebuah unit yang berwarna hitam ditunjukkan dengan sebuah bar, sedangkan yang berwarna putih ditunjukkan dengan sebuah space (spasi). Cara lain penulisan barcode adalah dengan bilang “1” untuk menyatakan black bar dan bilangan “0” untuk menyatakan white space. Misalnya, tujuh unit berikut ini adalah 0011001 dapat dinyatakan sebagai berikut space-space-bar-bar-space-space-bar.
