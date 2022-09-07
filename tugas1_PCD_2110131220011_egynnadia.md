@@ -22,6 +22,8 @@ Namun sebelumnya dilakukan pre-processing antara lain:
 ## Cara Komputer-Scanner Membaca Barcode
 Suatu bilangan barcode tunggal sebenarnya terdiri dari tujuh unit. Satu unit terdiri dari salah satu warna hitam atau putih. Sebuah unit yang berwarna hitam ditunjukkan dengan sebuah bar, sedangkan yang berwarna putih ditunjukkan dengan sebuah space (spasi). Cara lain penulisan barcode adalah dengan bilang “1” untuk menyatakan black bar dan bilangan “0” untuk menyatakan white space. Misalnya, tujuh unit berikut ini adalah 0011001 dapat dinyatakan sebagai berikut space-space-bar-bar-space-space-bar.
 
+![gambar barcode](/anatomibarcode.jpeg)
+
 
 
 
