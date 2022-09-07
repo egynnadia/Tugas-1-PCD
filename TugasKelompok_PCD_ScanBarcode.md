@@ -18,6 +18,8 @@ Di dalam komputer, data elektrik tadi ditampilkan dalam format yang sudah dikehe
 ### Deteksi Tepi (Edge Detection)
 Pada proses deteksi tepi ini citra barcode yang akan menjadi inputan diolah sehingga tepi citra barcode tampak lebih jelas serta memberikan efek smoothing sehingga citra bersih dari noise.
 
+![hasil tepi](/Barcode Hasil Proses Deteksi Tepi.PNG)
+
 ### Grayscalling dan Thresholding
 Setelah citra barcode mengalami proses deteksi tepi lalu citra mengalami 7 proses grayscalling, nilai dari hasil grayscalling digunakan untuk proses thresholding untuk mengubah nilai piksel menjadi 2 macam yaitu 0 dan 1.
 
