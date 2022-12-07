@@ -46,6 +46,8 @@ Tujuan utama dari proses penajaman ini adalah untuk menyoroti detail-detail halu
    ![hpf](gambar/hpf2.png)
    ![hpf](gambar/hpf3.png)
 
+<br>
+
 2. Kode Program yang Tersedia di Octave
    ![hpf_kode](gambar/hpf_kode.png)
 
