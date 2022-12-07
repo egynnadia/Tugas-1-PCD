@@ -41,32 +41,34 @@ Tujuan utama dari proses penajaman ini adalah untuk menyoroti detail-detail halu
 ![high-pass](gambar/high-pass.png)
 
 ### Implementasi High Pass Filtering menggunakan Octave
-1. Kode Program Manual
-   ![hpf](gambar/hpf.png)
-   ![hpf](gambar/hpf2.png)
-   ![hpf](gambar/hpf3.png)
+<p align = "justify">
+
+   1. Kode Program Manual <br>
+       ![hpf](gambar/hpf.png)<br>
+       ![hpf](gambar/hpf2.png)<br>
+       ![hpf](gambar/hpf3.png)<br>
 
 <br>
 
-2. Kode Program yang Tersedia di Octave
-   ![hpf_kode](gambar/hpf_kode.png)
+   2. Kode Program yang Tersedia di Octave<br>
+       ![hpf_kode](gambar/hpf_kode.png)<br>
 
-   - Kernel 1
-       ![kernel1](gambar/kernel1.png)
+      - Kernel 1<br>
+       ![kernel1](gambar/kernel1.png)<br>
 
-   - Kernel 2
-       ![kernel2](gambar/kernel2.png)
+      - Kernel 2<br>
+       ![kernel2](gambar/kernel2.png)<br>
 
-   - Kernel 3
-       ![kernel3](gambar/kernel3.png)
+      - Kernel 3<br>
+       ![kernel3](gambar/kernel3.png)<br>
 
-   - Kernel 4
-       ![kernel4](gambar/kernel4.png)
+      - Kernel 4<br>
+       ![kernel4](gambar/kernel4.png)<br>
 
-   - Kernel 5
-       ![kernel5](gambar/kernel5.png)
+      - Kernel 5<br>
+       ![kernel5](gambar/kernel5.png)<br>
 
-   - Kernel 6
+      - Kernel 6<br>
        ![kernel1](gambar/kernel6.png)
 
 
