@@ -40,6 +40,15 @@ Tujuan utama dari proses penajaman ini adalah untuk menyoroti detail-detail halu
 
 ![high-pass](gambar/high-pass.png)
 
+### Implementasi High Pass Filtering menggunakan Octave
+1. Kode Program Manual
+   ![hpf](gambar/hpf.png)
+   ![hpf](gambar/hpf2.png)
+   ![hpf](gambar/hpf3.png)
+
+2. Kode Program yang Tersedia di Octave
+   ![hpf_kode](gambar/hpf_kode.png)
+
 
 ## High Boost Filtering
 
