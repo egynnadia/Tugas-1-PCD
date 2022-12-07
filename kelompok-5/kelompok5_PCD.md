@@ -1,5 +1,5 @@
 
-# TUGAS KELPMPOK 5
+# TUGAS KELOMPOK 5
 
 - Egyn Terescova Nadia
 - Nurhaliza
@@ -118,4 +118,98 @@ Metode ini digunakan dalam penghalusan citra (image smoothing) atau menghilangka
 - Mengubah nilai tengah pixel dengan nilai median yang telah ditemukan
 - Proses diatas berulang hingga ke piksel terakhir citra
 - Menampilkan gambar berupa perbandingan sebelum dan sesudah di filter</p>
+
+## Edge Detection
+
+1. Edge Detection Sobel
+
+<p align = "justify"> Metode atau operator Sobel merupakan operator yang menghindari adanya perhitungan gradient di titik interpolasi. Operator Sobel menggunakan kernel ukuran 3x3 piksel untuk perhitungan gradientnya, dengan pembobotan yang lebih besar pada piksel-piksel yang dekat dengan titik pusat. Kelebihan dari metode sobel ini adalah kemampuan untuk mengurangi noise sebelum melakukan perhitungan deteksi tepi.<br>
+
+Kernel filter yang digunakan dalam metode Sobel ini adalah:<br>
+
+![kernel sobel](gambar/kernelSobel.png)<br>
+</p>
+
+<p align = "justify">Algoritma Edge Detection Sobel<br>
+
+- Memasukkan dan membaca image / gambar untuk dapat diproses
+- Mengkonversikan image RGB warna asli ke citra skala kelabu
+- Mengubah citra menjadi dua kali lipat
+- Pra-alokasikan matriks baru seukuran citra asli dengan nol
+- Masukkan matriks kernel sobel
+- Proses Deteksi Tepi dengan memperkirakan gradien komputasi dan besarnya vektor
+- Mendefinisikan treshold gambar yang di filter
+- Menampilkan citra hasil deteksi tepi
+
+</p>
+
+#### Implementasi Edge Detection Sobel menggunakan Octave
+<p align = "justify">
+
+   1. Kode Program Manual <br>
+       ![Sobel](gambar/sobelManual1.png)<br>
+       ![Sobel](gambar/sobelManual2.png)<br>
+
+       <h3>Output Kode Program</h3>
+       
+       ![Output](gambar/sobelManual3.png)<br>
+       ![Output](gambar/sobelManual4.png)<br>
+       ![Output](gambar/sobelManual5.png)<br>
+
+<br>
+
+   2. Kode Program yang Tersedia di Octave<br>
+       ![Sobel](gambar/sobelFungsi1.png)<br>
+
+       <h3>Output Kode Program</h3>
+
+       ![Sobel](gambar/sobelFungsi2.png)<br>
+
+</p>
+
+2. Edge Detection Prewitt
+
+<p align = "justify"> Metode Prewitt merupakan pengembangan metode robert dengan menggunakan filter HPF yang diberi satu angka nol penyangga. Metode ini mengambil prinsip dari fungsi laplacian yang dikenal sebagai fungsi untuk membangkitkan HPF. Persamaan gradien pada operator prewitt sama dengan gradien pada operator sobel perbedaannya adalah pada prewitt menggunakan konstanta c = 1.<br>
+
+Kernel filter yang digunakan dalam metode Prewitt ini adalah:<br>
+
+![kernel Prewitt](gambar/kernelPrewitt.png)<br>
+</p>
+
+<p align = "justify">Algoritma Edge Detection Prewitt<br>
+
+- Memasukkan dan membaca image / gambar untuk dapat diproses
+- Mengkonversikan image RGB warna asli ke citra skala kelabu
+- Mengubah citra menjadi dua kali lipat
+- Pra-alokasikan matriks baru seukuran citra asli dengan nol
+- Masukkan matriks kernel Prewitt
+- Proses Deteksi Tepi dengan memperkirakan gradien komputasi dan besarnya vektor
+- Mendefinisikan treshold gambar yang di filter
+- Menampilkan citra hasil deteksi tepi
+
+</p>
+
+#### Implementasi Edge Detection Prewitt menggunakan Octave
+<p align = "justify">
+
+   1. Kode Program Manual <br>
+       ![Prewitt](gambar/prewittManual1.png)<br>
+       ![Prewitt](gambar/prewittManual2.png)<br>
+
+       <h3>Output Kode Program</h3>
+       
+       ![Output](gambar/prewittManual3.png)<br>
+       ![Output](gambar/prewittManual4.png)<br>
+       ![Output](gambar/prewittManual5.png)<br>
+
+<br>
+
+   2. Kode Program yang Tersedia di Octave<br>
+       ![Prewitt](gambar/prewittFungsi1.png)<br>
+
+       <h3>Output Kode Program</h3>
+
+       ![Prewitt](gambar/prewittFungsi2.png)<br>
+
+</p>
 
