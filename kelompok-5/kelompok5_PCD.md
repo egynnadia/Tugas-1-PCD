@@ -49,6 +49,24 @@ Tujuan utama dari proses penajaman ini adalah untuk menyoroti detail-detail halu
 2. Kode Program yang Tersedia di Octave
    ![hpf_kode](gambar/hpf_kode.png)
 
+   - Kernel 1
+       ![kernel1](gambar/kernel1.png)
+
+   - Kernel 2
+       ![kernel2](gambar/kernel2.png)
+
+   - Kernel 3
+       ![kernel3](gambar/kernel3.png)
+
+   - Kernel 4
+       ![kernel4](gambar/kernel4.png)
+
+   - Kernel 5
+       ![kernel5](gambar/kernel5.png)
+
+   - Kernel 6
+       ![kernel1](gambar/kernel6.png)
+
 
 ## High Boost Filtering
 
