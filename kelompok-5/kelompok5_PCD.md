@@ -49,6 +49,7 @@ Tujuan utama dari proses penajaman ini adalah untuk menyoroti detail-detail halu
        ![hpf](gambar/hpf3.png)<br>
 
        <h3>Output Kode Program</h3>
+       
        ![manual1](gambar/manual1.png)<br>
        ![manual2](gambar/manual2.png)<br>
        ![manual3](gambar/manual3.png)
