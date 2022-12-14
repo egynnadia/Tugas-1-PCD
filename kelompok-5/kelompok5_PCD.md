@@ -26,6 +26,86 @@ Contoh kernel yang dapat digunakan pada <b>low-pass filtering</b> adalah</p>
 ![low-pass](gambar/low-pass.png)
 
 
+<h3>Dibawah ini merupakan code untuk Low Pass Filtering menggunakan fungsi conv2 yang ada pada Octave:</h3>
+
+``` Octave
+pkg load image;
+
+% membaca citra awal
+image = imread('smurf.jpg');
+img = rgb2gray(image);
+
+% membuat beberapa matriks kernel
+LPF1 = [1/16 1/8 1/16: 1/8 1/4 1/8: 1/16 1/8 1/16];
+LPF2 = [1/10 1/10 1/ 10: 1/10 1/5 1/10];
+LPF3 = [1 1 1: 1 1 1: 1 1 1]/9;
+
+% konvolusi dengan fungsi conv2
+result1 = uint8(conv2(double(img), LPF1, 'same'));
+result2 = uint8(conv2(double(img), LPF2, 'same'));
+result3 = uint8(conv2(double(img), LPF3, 'same'));
+
+% menampilkan citra
+figure(1);
+subplot(2,2,1); imshow(img); title("Citra Asli");
+subplot(2,2,2); imshow(result1); title("Hasil Low Pass Filtering 1");
+subplot(2,2,3); imshow(result2); title("Hasil Low Pass Filtering 2");
+subplot(2,2,4); imshow(result3); title("Hasil Low Pass Filtering");
+```
+
+<h3>Berikut hasil citra yang diperoleh:</h3>
+
+![output-1](gambar/LPF.PNG)
+
+<h3>Dibawah ini merupakan code untuk Low Pass Filtering menggunakan metode manual:</h3>
+
+``` Octave
+% membaca citra awal
+asli = imread('smurf.jpg');
+img = rgb2gray(asli);
+
+% membuat matriks kernel
+LPF = [1 1 1; 1 1 1; 1 1 1]/9;
+
+% mengcopy citra image ke img
+imgxLPF = img;
+
+% melakukan konvolusi dan mendapatkan ukuran matriks citra
+[bf, kf] = size(img);
+[bg, kg] = size(LPF);
+
+m2 = floor(bg/2);
+n2 = floor(kg/2);
+
+% penambahan elemen nol
+pad = zeros(bf+2, kf+2);
+pad (2:bf+1, 2:kf+1) = img;
+[b_pad, k_pad] = size(pad);
+
+for i = m2+1 : b_pad-m2;
+  for j = n2+1 : k_pad-n2;
+    temp = 0;
+    for k = -m2 : m2;
+      for l = -n2 : n2;
+        temp = temp + LPF(k+m2+1, l+n2+1) * pad(i-k, j-l);
+      end
+    end
+      imgxLPF(i,j) = temp;
+  end
+end
+
+imgxLPF = uint8(imgxLPF(2:bf-1, 2:kf-1));
+
+% menampilkan citra
+figure(1);
+subplot(1,2,1); imshow(img); title("Citra Asli");
+subplot(1,2,2); imshow(imgxLPF); title("Hasil Low Pass Filtering");
+```
+
+<h3>Berikut hasil citra yang diperoleh:</h3>
+
+![output-2](gambar/LPF-2.PNG)
+
 
 ## High Pass Filtering
 
@@ -118,6 +198,83 @@ Metode ini digunakan dalam penghalusan citra (image smoothing) atau menghilangka
 - Mengubah nilai tengah pixel dengan nilai median yang telah ditemukan
 - Proses diatas berulang hingga ke piksel terakhir citra
 - Menampilkan gambar berupa perbandingan sebelum dan sesudah di filter</p>
+
+<h3>Dibawah ini merupakan code untuk Median Filtering menggunakan fungsi yang ada pada Octave:</h3>
+
+``` Octave
+pkg load image;
+clear;
+clc;
+
+# Membaca Citra Awal
+image = imread('smurf.jpg');
+img = rgb2gray(image);
+
+% Memberi noise (derau) pada citra
+noisy = imnoise(img, 'salt & pepper', 0.2);
+
+% Mengaplikasikan median fillter
+output = medfilt2(noisy);
+output2 = medfilt2(img);
+
+% Menampilkan citra
+subplot(2,3,1); imshow(img), title("Citra Awal");
+subplot(2,3,2); imshow(noisy), title("Citra yang Diberi Noise");
+subplot(2,3,3); imshow(output), title("Citra noise yang diberi Media Filter");
+subplot(2,3,4); imshow(img), title("Citra Awal");
+subplot(2,3,5); imshow(output2), title("Citra awal yang diberi Media filter");
+```
+
+<h3>Berikut hasil citra yang diperoleh:</h3>
+
+![output-1](gambar/median-2.PNG)
+
+<h3>Dibawah ini merupakan code untuk Median Filtering menggunakan metode manual:</h3>
+
+``` Octave
+pkg load image;
+clear;
+clc;
+
+# Membaca Citra Awal
+image = imread('smurf.jpg');
+img = rgb2gray(image);
+
+% Memberi noise (derau) pada citra
+noisy = imnoise(img, 'salt & pepper', 0.2);
+
+% Mendapatkan ukuran matriks citra
+[img_height, img_width] = size(noisy);
+
+# buat sebuah wadah baru untuk citra
+new_img = zeros(img_height, img_width);
+
+% Mengonversikan ukuran matriks tadi kedalam 8 bitand
+new_img = uint8(new_img);
+
+for i = 1:img_height
+  for j = 1:img_width
+    % Memberikan batasan agar mask filter tidak melebihi dimensi citra
+    xmin = max(1, i-1);
+    xmax = min(img_height, i+1);
+    ymin = max(1, j-1);
+    ymax = min(img_width, j+1);
+
+    % Mask filter akan menjadi
+    temp = noisy(xmin:xmax, ymin:ymax);
+    new_img(i,j) = median(temp(:));
+  end
+end
+
+% Menampilkan citra
+subplot(1,3,1); imshow(img), title("Citra Awal");
+subplot(1,3,2); imshow(noisy), title("Citra yang Diberi Noise");
+subplot(1,3,3); imshow(new_img), title("Citra noise yang diberi Media Filter");
+```
+
+<h3>Berikut hasil citra yang diperoleh:</h3>
+
+![output-2](gambar/median.PNG)
 
 ## Edge Detection
 
