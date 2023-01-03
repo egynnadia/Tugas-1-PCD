@@ -18,12 +18,12 @@ Di dalam komputer, data elektrik tadi ditampilkan dalam format yang sudah dikehe
 ### Deteksi Tepi (Edge Detection)
 Pada proses deteksi tepi ini citra barcode yang akan menjadi inputan diolah sehingga tepi citra barcode tampak lebih jelas serta memberikan efek smoothing sehingga citra bersih dari noise.
 
-![hasil tepi](/DeteksiTepi.PNG)
+![hasil tepi](DeteksiTepi.PNG)
 
 ### Grayscalling dan Thresholding
 Setelah citra barcode mengalami proses deteksi tepi lalu citra mengalami 7 proses grayscalling, nilai dari hasil grayscalling digunakan untuk proses thresholding untuk mengubah nilai piksel menjadi 2 macam yaitu 0 dan 1.
 
-![Grayscalling](/Grayscalling.PNG)
+![Grayscalling](Grayscalling.PNG)
 
 ### Ekstraksi Ciri
 Nilai-nilai pixel dari proses grayscalling, edge detection, dan thresholding yang masih berukuran besar tidak diambil secara keseluruhan tetapi diambil hanya nilai pixel pada bagian tengah-tengah citra secara horizontal.Citra input berukuran 60×100 pixel dikonversi menjadi 20×30 pixel supaya pada saat training lebih efisien waktu dan tidak berat. 
@@ -31,7 +31,7 @@ Nilai-nilai pixel dari proses grayscalling, edge detection, dan thresholding yan
 ## Cara Komputer-Scanner Membaca Barcode
 Suatu bilangan barcode tunggal sebenarnya terdiri dari tujuh unit. Satu unit terdiri dari salah satu warna hitam atau putih. Sebuah unit yang berwarna hitam ditunjukkan dengan sebuah bar, sedangkan yang berwarna putih ditunjukkan dengan sebuah space (spasi). Cara lain penulisan barcode adalah dengan bilang “1” untuk menyatakan black bar dan bilangan “0” untuk menyatakan white space. Misalnya, tujuh unit berikut ini adalah 0011001 dapat dinyatakan sebagai berikut space-space-bar-bar-space-space-bar.
 
-![gambar barcode](/anatomibarcode.jpeg)
+![gambar barcode](anatomibarcode.jpeg)
 
 Preprecessing selanjutnya dengan menggunakan metode morfologi, antara lain: labeling, filling, dilatasi dan erosi.
 
