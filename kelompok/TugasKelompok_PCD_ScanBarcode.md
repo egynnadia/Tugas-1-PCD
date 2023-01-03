@@ -1,6 +1,6 @@
 # Barcode
 
-![gambar barcode](/barcode.jpeg)
+![gambar barcode](barcode.jpeg)
 ## Pendahuluan
 Barcode atau dalam Bahasa Indonesia seringkali disebut kode batang adalah an optical machine-readable representation of data. Kode berbentuk garis dan berwarna hitam putih tersebut mengandung satu kumpulan kombinasi yang berlainan ukuran, dan disusun sedemikian rupa menurut aturan tertentu sehingga dapat diterjemahkan oleh mesin pembacanya (Wahyono, 2010). **Barcode sendiri adalah** salah satu cara yang digunakan manusia dalam menjadikan sejumlah data secara khas meliputi nama barang, jenis barang, jumlah, harga, periode suatu barang, dan lain sebagainya. Semua informasi yang dibutuhkan untuk keperluan tertentu mengenai suatu barang akan dijadikan suatu kode yang mempunyai bentuk batang dengan warna hitam/gelap.Barcode juga bisa disebut dengan sederetan garis hitam putih yang disusun secara vertikal dengan tingkat ketebalan yang berbeda. Tingkat ketebalan dan jumlah garis dari barcode memberikan arti pada masing- masing komponen barcode dan membedakan antara jenis barcode yang satu dengan yang lain. Garis putih pada barcode adalah sebagai spasi sedangkan garis hitam menunjukkan pengkodean suatu barcode. Barcode menyediakan suatu metode pengkodean informasi teks yang sederhana dan murah. Barcode juga sebagai media penangkapan informasi data yang cepat dan akurat. Tujuan pokok barcode adalah untuk mengidentifikasi sesuatu dengan memberi label yang berisi barcode.
 
